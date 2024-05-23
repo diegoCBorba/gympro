@@ -1,0 +1,92 @@
+.containerMenu{
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+  
+  width: 25px;
+  height: 25px;
+
+  z-index: 2;
+  
+  position: relative;
+  transition: .5s ease-in-out;
+
+  display: none;
+}
+
+.containerMenu span{
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: var(--color5);
+
+  transition: .25s ease-in-out;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.containerMenu span:nth-child(1){
+  top: 30%;
+}
+
+.containerMenu span:nth-child(2){
+  top: 70%;
+}
+
+.containerMenu.open span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.containerMenu.open span:nth-child(2){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.containerMaster {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+
+  max-width: 400px;
+  width: 100%;
+
+  background: var(--color3);
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+}
+
+.containerMaster.open {
+  transform: translateY(0);
+}
+
+.listNavbar{
+  margin-top: 100px;
+  list-style: none;
+
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin: 100px 2rem;
+
+  padding-bottom: 2rem;
+
+  border-bottom: 1px solid var(--color5);
+}
+
+.listNavbar li{
+  display: flex;
+}
+
+@media (max-width: 1000px){
+  .containerMenu{
+    display: block;
+  }
+}

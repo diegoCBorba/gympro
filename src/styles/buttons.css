@@ -1,0 +1,33 @@
+.buttonPoint, .buttonPointLeft{
+  position: relative;
+
+  padding: 20px;
+}
+
+.buttonPoint::after, .buttonPointLeft::after{
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background: var(--color5);
+  display: block;
+  position: absolute;
+
+  transition: width 0.5s, height 0.5s;
+}
+
+.buttonPoint::after{
+  left: 50%;
+  bottom: 15%;  
+  transform: translate(-50%, 50%);
+}
+
+.buttonPointLeft::after{
+  top: 45%;
+}
+
+.buttonPoint:hover::after, .buttonPointLeft:hover::after{
+  width: 6px;
+  height: 6px;
+}
+
