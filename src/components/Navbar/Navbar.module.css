@@ -1,38 +1,132 @@
 .container{
-  height: 60px;
   background-color: var(--color3);
 
   position: fixed;
   width: 100%;
-  
+  padding: 1rem 2rem;
+}
+
+.boxNav{
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 2rem;
-
-  padding: 3rem 2rem;
 }
 
 .logo{
   font-size: 1.5rem;
   font-weight: 500;
 
-  position: relative;
-
   text-transform: uppercase;
-}
-
-.listNavbar{
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-
-  font-size: 1.2rem;
 }
 
 .containerSocial{
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+
+  transition: opacity 0.3s ease;
 }
 
+.containerSocial.active{
+  pointer-events: none;
+  opacity: 0;
+}
+
+.containerSocial a{
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px){
+  .containerSocial.isNav{
+    display: none;
+  }
+}
+
+/* NAV LINKS */
+
+.navLinks{
+  overflow: hidden;
+}
+
+.wrapper{
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.wrapper div:nth-child(1){
+  flex: 2;
+}
+
+.wrapper div:nth-child(2){
+  flex: 1;
+}
+
+.boxCrypt{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  overflow: hidden;
+
+  padding: 0.2rem 0;
+}
+
+.boxCrypt > p{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.boxCrypt > p span{
+  color: var(--color2);
+}
+
+.listNavbar{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+
+  font-size: 4vw;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.listNavbar p{
+  display: flex;
+  overflow: hidden;
+}
+
+.boxNavLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.boxTextLinks p{
+  font-size: 1.8vw;
+}
+
+@media (max-width: 600px){
+  .boxCrypt{
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .boxTextLinks{
+    display: none;
+  }
+}
+
+@media (max-width: 1000px){
+  .listNavbar{
+    font-size: 2rem;
+  }
+
+  .boxTextLinks p{
+    font-size: 1rem;
+  }  
+}

@@ -4,9 +4,21 @@ import { Instagram, Phone } from "lucide-react"
 
 import { ButtonMagnetic } from "../../ButtonMagnetic/ButtonMagnetic"
 
-export const SocialIcons = () => {
+interface PropsSocialIcons{
+  isActive: boolean,
+  isNav: boolean,
+}
+
+/*
+  Componente para os ícones das midias sociais magneticos
+*/
+
+export const SocialIcons = ({ isActive, isNav }: PropsSocialIcons) => {
   return (
-    <div className={navbar.containerSocial}>
+    <div className={`${navbar.containerSocial}
+      ${isNav? navbar.isNav : ""}
+      ${isActive? navbar.active : ""}
+    `}>
       <ButtonMagnetic>
         <a href="" target="_blank">
           <Instagram strokeWidth={2} size={25}/>

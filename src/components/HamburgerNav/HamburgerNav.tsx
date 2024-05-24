@@ -1,41 +1,31 @@
-import { useEffect, useState } from "react"
 import hamburger from "./HamburgerNav.module.css"
 
-interface PropsHamburguer{
-  hidden: boolean;
+import { ComponentProps } from "react"
+
+interface PropsHamburger extends ComponentProps<"div">{
+  isActive: boolean,
 }
 
-export const HamburgerNav = (props: PropsHamburguer) => {
-  const [isActive, setIsActive] = useState(false)
+/* 
+  Componente para o funcionamento do ícone do Hamburger
+*/
 
-  function handleChange(){
-    setIsActive(!isActive)
-  }
-
-  useEffect(() => {
-    if (props.hidden) {
-      setIsActive(false);
-    }
-  }, [props.hidden]);
-
+export const HamburgerNav = ({ isActive, ...rest }: PropsHamburger) => {
   return (
-    <>
-      <div className={hamburger.containerMenu} 
-        onClick={handleChange}>
-        <div className={`${hamburger.containerIconMenu}
-        ${isActive ? hamburger.open : ""}
-        `}>
-          <span/>
-          <span/>
-        </div>
-
-        <div className={`${hamburger.containerTextMenu}
-          ${isActive ? hamburger.open : ""}
-        `}>
-          <p>menu</p>
-          <p>close</p>
-        </div>
+    <div className={hamburger.containerMenu} {...rest}>
+      <div className={`${hamburger.containerIconMenu}
+      ${isActive ? hamburger.open : ""}
+      `}>
+        <span/>
+        <span/>
       </div>
-    </>
+
+      <div className={`${hamburger.containerTextMenu}
+        ${isActive ? hamburger.open : ""}
+      `}>
+        <p>menu</p>
+        <p>close</p>
+      </div>
+    </div>
   )
 }
