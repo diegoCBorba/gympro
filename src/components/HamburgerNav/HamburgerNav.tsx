@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react"
-
-import { ListItemHamburger } from "./division/ListItemHamburger";
-
 import hamburger from "./HamburgerNav.module.css"
 
 interface PropsHamburguer{
@@ -23,19 +20,21 @@ export const HamburgerNav = (props: PropsHamburguer) => {
 
   return (
     <>
-      <div 
-        className={`${hamburger.containerMenu}
+      <div className={hamburger.containerMenu} 
+        onClick={handleChange}>
+        <div className={`${hamburger.containerIconMenu}
         ${isActive ? hamburger.open : ""}
-        `}
-        onClick={handleChange}
-      >
-        <span/>
-        <span/>
-      </div>
-      <div className={`${hamburger.containerMaster}
-        ${isActive ? hamburger.open : ""}
-      `}>
-        <ListItemHamburger/>
+        `}>
+          <span/>
+          <span/>
+        </div>
+
+        <div className={`${hamburger.containerTextMenu}
+          ${isActive ? hamburger.open : ""}
+        `}>
+          <p>menu</p>
+          <p>close</p>
+        </div>
       </div>
     </>
   )

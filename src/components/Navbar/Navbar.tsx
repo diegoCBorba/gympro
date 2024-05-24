@@ -4,8 +4,8 @@ import { useState } from "react"
 import { motion, useScroll, useMotionValueEvent, easeInOut } from "framer-motion"
 
 import { Link } from "react-router-dom"
-import { ListItem } from "./division/ListItem"
 import { HamburgerNav } from "../HamburgerNav/HamburgerNav"
+import { SocialIcons } from "./division/SocialIcons"
 
 export const Navbar = () => {
   const { scrollY } = useScroll()
@@ -34,8 +34,8 @@ export const Navbar = () => {
         <Link to="/">gympro</Link>
       </div>
 
-      <ListItem/>
       <HamburgerNav hidden={hidden}/>
+      <SocialIcons/>
     </motion.div>
   )
 }
