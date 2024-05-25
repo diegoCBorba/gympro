@@ -1,0 +1,154 @@
+.containerMaster{
+  height: 200vh;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.teste{
+  height: 100vh;
+  background-color: var(--color3);
+}
+
+.containerRef{
+  height: 100vh;
+  position: relative;
+}
+
+.containerHigher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  height: 100vh;
+}
+
+.boxLogoHeader div:nth-child(1){
+  margin-right: 15vw;
+}
+
+.boxLogoHeader div:nth-child(2){
+  margin-left: 15vw;
+}
+
+.containerText{
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.containerText p{
+  font-size: 10vw;
+  font-weight: 700;
+  line-height: 11vw;
+  text-transform: uppercase;
+
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.containerText.second{
+  color: var(--color2);
+}
+
+.containerText .secondary{
+  transform: rotateX(-90deg) translateY(5vw);
+  transform-origin: bottom center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+
+  color: var(--color2);
+}
+
+.containerText.second .secondary{
+  color: var(--color5);
+}
+
+.containerText:hover{
+  transform: rotateX(90deg);
+}
+
+.containerText:hover .secondary{
+  opacity: 1;
+}
+
+.containerText:hover .primary{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.boxImageHeader img{
+  filter: grayscale(50%);
+
+  position: absolute;
+  height: 90%;
+  max-width: max-content;
+  width: 100%;
+  bottom: 0;
+  
+  left: 50%;
+  transform: translate(-50%);
+  object-fit: cover;
+}
+
+.containerApresetation{
+  height: 120vh;
+  position: relative;
+}
+
+.containerApresetation > div{
+  position: absolute;
+
+  max-width: 30vw;
+
+  padding: 2rem;
+
+  background-color: var(--color3);
+}
+
+.firstTation{
+  left: 0;
+  bottom: 0;
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
+.secondTation{
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.containerApresetation p{
+  font-size: 1.8vw;
+  text-transform: uppercase;
+
+  line-height: 3w;
+}
+
+.containerApresetation span{
+  color: var(--color2);
+}
+
+@media (max-width: 1000px){
+    .containerApresetation > div{
+      max-width: 400px;
+    }
+
+    .containerApresetation p{
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+  .containerApresetation > div{
+    max-width: 80%;
+  }
+
+  .containerApresetation p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
