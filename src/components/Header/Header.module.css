@@ -1,21 +1,15 @@
 .containerMaster{
-  height: 200vh;
-
   overflow: hidden;
-  position: relative;
-}
-
-.teste{
-  height: 100vh;
-  background-color: var(--color3);
 }
 
 .containerRef{
-  height: 100vh;
+  height: 110vh;
   position: relative;
 }
 
 .containerHigher{
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,62 +87,6 @@
   object-fit: cover;
 }
 
-.containerApresetation{
-  height: 120vh;
-  position: relative;
-}
-
-.containerApresetation > div{
-  position: absolute;
-
-  max-width: 30vw;
-
-  padding: 2rem;
-
-  background-color: var(--color3);
-}
-
-.firstTation{
-  left: 0;
-  bottom: 0;
-  border-radius: 0rem 2rem 2rem 0rem;
-}
-
-.secondTation{
-  right: 0;
-  bottom: 0;
-  border-radius: 2rem 0rem 0rem 2rem;
-}
-
-.containerApresetation p{
-  font-size: 1.8vw;
-  text-transform: uppercase;
-
-  line-height: 3w;
-}
-
-.containerApresetation span{
-  color: var(--color2);
-}
-
 @media (max-width: 1000px){
-    .containerApresetation > div{
-      max-width: 400px;
-    }
 
-    .containerApresetation p{
-      font-size: 1.2rem;
-      line-height: 2rem;
-    }
-}
-
-@media (max-width: 600px){
-  .containerApresetation > div{
-    max-width: 80%;
-  }
-
-  .containerApresetation p{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
 }

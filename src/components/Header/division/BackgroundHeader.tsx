@@ -10,11 +10,11 @@ interface PropsBackground{
 
 export const BackgroundHeader = ({scrollYProgress}: PropsBackground) => {
   const height = useTransform(scrollYProgress, [0, 1], ["90%", "80%"]);
-  const bottom = useTransform(scrollYProgress, [0, 1], ["0", "-200%"]);
+  const bottom = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
 
   return (
     <div className={header.boxImageHeader}>
-      <motion.img style={{height, bottom}} src={imageHeader} alt="" />
+      <motion.img style={{bottom, height}} src={imageHeader} alt="Homem Forte"/>
     </div>
   )
 }

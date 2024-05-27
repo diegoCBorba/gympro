@@ -1,0 +1,9 @@
+.containerMaster{
+  background-color: var(--color3);
+  padding-top: 4rem;
+}
+
+.titleSection{
+  text-transform: uppercase;
+  font-weight: 500;
+}
