@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Poppins, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
@@ -23,7 +27,8 @@ body{
 }
 
 .container-section{
-  width: 1680px;
+  max-width: 1680px;
+  width: 100%;
   margin: auto;
 }
 

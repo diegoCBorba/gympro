@@ -1,22 +1,33 @@
 import about from "./About.module.css"
 
-export const About = () => {
-  return (
-    <section id="#about" className={about.containerMaster}>
-      <div className="container-section">
-        <div>
 
-        </div>
-        <div>
-          <h1 className={about.titleSection}>Por que nos escolher?</h1>
-          <div>
-            <div>
-          
-            </div>
-          </div>
-        </div>
+import { useRef } from "react"
+import { useScroll } from "framer-motion"
+
+import { PictureAbout } from "./division/PictureAbout"
+import { DescriptionAbout } from "./division/DescriptionAbout"
+
+export const About = () => {
+  const container = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'end start']
+  })
+
+
+
+  return (
+    <>
+    <section ref={container} id="about" className={about.containerMaster}>
+      <div className="container-section">
+        <PictureAbout scrollYProgress={scrollYProgress}/>
+        <DescriptionAbout scrollYProgress={scrollYProgress}/>
       </div>
     </section>
+    <div className={about.teste}>
+
+    </div>
+    </>
   )
 }
 
