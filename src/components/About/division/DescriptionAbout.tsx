@@ -1,4 +1,5 @@
 import { ButtonMagnetic } from "../../ButtonMagnetic/ButtonMagnetic"
+import { CharTranslate } from "../../CharTranslate/CharTranslate"
 import about from "../About.module.css"
 
 import { motion, MotionValue, useTransform } from "framer-motion"
@@ -12,17 +13,17 @@ export const DescriptionAbout = ({ scrollYProgress }: propsDescription) => {
 
   return (
     <div className={about.containerAbout}>
-    <h1>Por que nos escolher?</h1>
-    <p>Na GymPro, oferecemos uma variedade de modalidades de treino, desde musculação até aulas de alta intensidade. Nossos planos customizáveis são projetados para atender às suas necessidades específicas. Com equipamentos modernos e uma equipe dedicada, garantimos que você alcance seus objetivos fitness.</p>
+      <h1>{CharTranslate("Por que nos escolher?", 5)}</h1>
+      <p>{CharTranslate("Na GymPro, oferecemos uma variedade de modalidades de treino, desde musculação até aulas de alta intensidade. Nossos planos customizáveis são projetados para atender às suas necessidades específicas. Com equipamentos modernos e uma equipe dedicada, garantimos que você alcance seus objetivos fitness.", 2)}</p>
 
-    <motion.div style={{bottom}} className={about.containerButtonContact}>
-      <ButtonMagnetic>
-        <a href="#contact" className={about.buttonContact}>
-          <span>contato</span>
-          <span>clique</span>
-        </a>
-      </ButtonMagnetic>
-    </motion.div>
-  </div>
+      <motion.div style={{bottom}} className={about.containerButtonContact}>
+        <ButtonMagnetic>
+          <a href="#contact" className={about.buttonContact}>
+            <span>contato</span>
+            <span>clique</span>
+          </a>
+        </ButtonMagnetic>
+      </motion.div>
+    </div>
   )
 }

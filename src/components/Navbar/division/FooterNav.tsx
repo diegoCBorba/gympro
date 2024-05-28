@@ -15,18 +15,20 @@ export const FooterNav = () => {
         custom={[0.2, 0]}
         variants={translateAnimation}
         initial="initial"
-        animate="open"  
+        animate="open"
         exit="closed"
       >
-        <SocialIcons isNav={false} isActive={false}/>
+        <SocialIcons isNav={false} isActive={false} />
       </motion.div>
       <motion.p
         custom={[0.2, 0]}
         variants={translateAnimation}
         initial="initial"
-        animate="open"  
+        animate="open"
         exit="closed"
-      ><span>created by</span> <a href="https://diegocardoso.vercel.app/" target="_blank">diego cardoso</a></motion.p>
+      >
+        <span>created by</span> <a href="https://diegocardoso.vercel.app/" target="_blank">diego cardoso</a>
+      </motion.p>
     </div>
   )
 }
