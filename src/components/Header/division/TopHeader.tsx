@@ -13,8 +13,8 @@ export const TopHeader = ({ scrollYProgress }: PropsTop) => {
   return (
     <div className={header.containerHigher}>
       <motion.div style={{ y }} className={header.boxLogoHeader}>
-        <Text3d primary="faça parte" secondary="faça parte"/>
-        <Text3d primary="viva fitness" secondary="viva fitness" secondClass={true}/>
+        <Text3d primary="seja parte" secondary="seja parte" direction={true}/>
+        <Text3d primary="viva fitness" secondary="viva fitness" secondClass={true} direction={false}/>
       </motion.div>
     </div>
   )

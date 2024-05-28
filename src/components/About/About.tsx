@@ -24,9 +24,6 @@ export const About = () => {
         <DescriptionAbout scrollYProgress={scrollYProgress}/>
       </div>
     </section>
-    <div className={about.teste}>
-
-    </div>
     </>
   )
 }

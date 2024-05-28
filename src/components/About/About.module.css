@@ -3,11 +3,6 @@
   padding: 4rem 2rem 6rem 2rem;
 }
 
-.teste{
-  height: 100vh;
-  background-color: var(--color3);
-}
-
 .containerMaster > div{
   display: flex;
   gap: 4rem;

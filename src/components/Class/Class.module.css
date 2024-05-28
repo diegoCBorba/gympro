@@ -1,0 +1,63 @@
+.containerMaster{
+  background-color: var(--color3);
+  padding: 0 2rem;
+}
+
+.containerMaster > div{
+  display: flex;
+  height: 200vh;
+}
+
+.containerMaster > div > div:nth-child(1){
+  flex: 2;
+}
+
+.containerMaster > div > div:nth-child(2){
+  flex: 1;
+}
+
+.containerImage{
+  position: relative;
+}
+
+.boxImage{
+  position: absolute;
+  right: 0;
+  width: 28vw;
+}
+
+.boxImage img{
+  width: 100%;
+}
+
+.containerDescription{
+  position: relative;
+  text-transform: uppercase;
+
+  height: 50%;
+  width: 100%;
+}
+
+.containerDescription h1{
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.containerDescription p{
+  font-size: 1.5rem;
+  font-weight: 300;
+  
+  width: 50%;
+
+  position: absolute;
+}
+
+.containerDescription > p:nth-child(1){
+  top: 0;
+  right: 0;
+}
+
+.containerDescription > p:nth-child(2){
+  bottom: 20%;
+  right: 0;
+}
