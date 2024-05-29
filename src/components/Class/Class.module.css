@@ -3,61 +3,111 @@
   padding: 0 2rem;
 }
 
+.teste{
+  height: 100vh;
+}
+
 .containerMaster > div{
-  display: flex;
-  height: 200vh;
-}
-
-.containerMaster > div > div:nth-child(1){
-  flex: 2;
-}
-
-.containerMaster > div > div:nth-child(2){
-  flex: 1;
-}
-
-.containerImage{
   position: relative;
 }
 
-.boxImage{
-  position: absolute;
-  right: 0;
-  width: 28vw;
-}
+.containerContent{
+  position: relative;
 
-.boxImage img{
-  width: 100%;
+  display: flex;
+  height: 100%;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 2rem;
 }
 
 .containerDescription{
-  position: relative;
+  width: 50%;
   text-transform: uppercase;
 
-  height: 50%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding-right: 2rem;
+  height: 280px;
 }
 
 .containerDescription h1{
-  font-weight: 500;
-  font-size: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .containerDescription p{
   font-size: 1.5rem;
-  font-weight: 300;
-  
-  width: 50%;
+}
+
+.containerList{
+  width: 100%;
+}
+
+.listClasses{
+  list-style: none;
+  font-size: 4rem;
+
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  cursor: pointer;
+}
+
+.listClasses li{
+  border-bottom: 1px solid var(--color5);
+
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+.listClasses li:hover{
+  color: var(--color2);
+  border-bottom: 1px solid var(--color2);
+}
+
+.containerImage{
+  height: 100%;
+  width: 100%;
 
   position: absolute;
-}
-
-.containerDescription > p:nth-child(1){
   top: 0;
+}
+
+.boxImage{
+  height: 100%;
+  max-width: 50%;
+
+  position: absolute;
+  overflow: hidden;
+
   right: 0;
 }
 
-.containerDescription > p:nth-child(2){
-  bottom: 20%;
+.boxImage img{
+  position: relative;
+  height: 130%;
+  
   right: 0;
+}
+
+@media (max-width: 1680px) {
+  .containerDescription{
+    height: 18vw;
+    gap: 3.8vw;
+  }
+
+  .containerDescription p{
+    font-size: 1.3vw;
+  }
+
+  .listClasses{
+    font-size: 3.8vw;
+  }
 }
