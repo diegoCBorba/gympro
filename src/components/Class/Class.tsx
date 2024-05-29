@@ -10,6 +10,8 @@ import { motion, useTransform, useScroll } from "framer-motion"
 import { titleAnimation } from "./anim"
 import { opacity } from "../Navbar/anim"
 
+import { CharTranslate } from "../SentenceTranslate/CharTranslate"
+
 interface PropsDataClasses{
   class: string,
   description: string,
@@ -78,7 +80,9 @@ export const Class = () => {
             variants={titleAnimation}
             initial="initial"
             animate={onHover ? "open" : "initial"}
-            >Nossas Modalidades</motion.h1>
+            >
+              <CharTranslate word="Nossas Modalidades" direction={true} velocity={2}/>
+            </motion.h1>
             <motion.p variants={opacity}
               initial="initial"
               animate={onHover? "open" : "closed"}
