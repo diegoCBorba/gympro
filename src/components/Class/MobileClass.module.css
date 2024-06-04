@@ -1,0 +1,108 @@
+.containerMaster{
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.containerMaster > h1{
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  margin-bottom: 2rem;
+}
+
+.containerClasses{
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.containerClasses > .boxClass:not(:nth-child(odd)){
+  flex-direction: row-reverse;
+}
+
+.containerClasses > .boxClass:not(:nth-child(odd)) h2{
+  text-align: end;
+}
+
+.boxClass{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.boxDescription{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.boxClass span{
+  display: none;
+}
+
+.boxDescription h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4vw;
+  height: fit-content ;
+}
+
+.boxDescription p{
+  text-align: justify;
+  font-size: 2.5vw;
+}
+
+.boxImage{
+  min-width: 250px;
+  height: 250px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.boxImage img{
+  width: 100%;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  .containerClasses{
+    gap: 2rem;
+  }
+
+  .boxClass, .containerClasses > .boxClass:not(:nth-child(odd)){
+    flex-direction: column;
+  }
+
+  .boxClass{
+    gap: 0.5rem;
+  }
+
+  .boxClass span{
+    display: block;
+
+    height: 0.5vw;
+    width: 100%;
+    background-color: var(--color5);
+  }
+
+  .boxDescription h2{
+    font-size: 8vw;
+  }
+
+  .boxDescription p{
+    display: none;
+  }
+
+  .boxImage{
+    width: calc(100vw - 64px);
+    min-width: auto;
+    height: calc(100vw - 64px);
+  }
+}

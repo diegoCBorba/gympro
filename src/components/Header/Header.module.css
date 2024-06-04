@@ -18,59 +18,20 @@
   height: 100vh;
 }
 
-.boxLogoHeader div:nth-child(1){
-  margin-right: 15vw;
-}
-
-.boxLogoHeader div:nth-child(2){
-  margin-left: 15vw;
-}
-
-.containerText{
-  cursor: pointer;
-  transition: transform 0.4s;
-  transform-style: preserve-3d;
-  z-index: 1;
-}
-
-.containerText p{
+.boxLogoHeader{
   font-size: 10vw;
   font-weight: 700;
   line-height: 11vw;
   text-transform: uppercase;
-
-  transition: transform 0.4s, opacity 0.4s;
 }
 
-.containerText.second{
+.boxLogoHeader p:nth-child(1){
+  margin-right: 15vw;
+}
+
+.boxLogoHeader p:nth-child(2){
+  margin-left: 15vw;
   color: var(--color2);
-}
-
-.containerText .secondary{
-  transform: rotateX(-90deg) translateY(5vw);
-  transform-origin: bottom center;
-  position: absolute;
-  top: 0;
-  opacity: 0;
-
-  color: var(--color2);
-}
-
-.containerText.second .secondary{
-  color: var(--color5);
-}
-
-.containerText:hover{
-  transform: rotateX(90deg);
-}
-
-.containerText:hover .secondary{
-  opacity: 1;
-}
-
-.containerText:hover .primary{
-  transform: translateY(-100%);
-  opacity: 0;
 }
 
 .boxImageHeader img{
@@ -87,6 +48,3 @@
   object-fit: cover;
 }
 
-@media (max-width: 1000px){
-
-}

@@ -1,7 +1,7 @@
 import header from "../Header.module.css"
 
-import { Text3d } from "./Text3d"
 import { MotionValue, motion, useTransform } from "framer-motion"
+import { CharTranslate } from "../../SentenceTranslate/CharTranslate";
 
 interface PropsTop{
   scrollYProgress: MotionValue<number>,
@@ -13,8 +13,12 @@ export const TopHeader = ({ scrollYProgress }: PropsTop) => {
   return (
     <div className={header.containerHigher}>
       <motion.div style={{ y }} className={header.boxLogoHeader}>
-        <Text3d primary="seja parte" secondary="seja parte" direction={true}/>
-        <Text3d primary="viva fitness" secondary="viva fitness" secondClass={true} direction={false}/>
+        <p>
+          <CharTranslate velocity={2} word="seja parte" direction={true}/>
+        </p>
+        <p>
+          <CharTranslate velocity={2} word="viva fitness" direction={false}/>
+        </p>
       </motion.div>
     </div>
   )

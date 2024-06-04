@@ -5,12 +5,9 @@ import yogaImg from "../../../public/home/class/class-yoga.jpg"
 import swimImg from "../../../public/home/class/class-swim.jpg"
 import crossfitImg from "../../../public/home/class/class-crossfit.jpg"
 
-import { useRef, useState } from "react"
-import { motion, useTransform, useScroll } from "framer-motion"
-import { titleAnimation } from "./anim"
-import { opacity } from "../Navbar/anim"
-
-import { CharTranslate } from "../SentenceTranslate/CharTranslate"
+import { FullSizeClass } from "./division/FullSizeClass"
+import { MobileClass } from "./division/MobileClass"
+import { useEffect, useState } from "react"
 
 interface PropsDataClasses{
   class: string,
@@ -43,71 +40,25 @@ const dataClasses: PropsDataClasses[] = [
 
 
 export const Class = () => {
-  const container = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["end start" , "start end"]
-  })
+  const [shouldLoadComponent, setShouldLoadComponent] = useState(false)
 
-  const[onHover, setOnHover] = useState<boolean>(false)
-  const[indexData, setIndexData] = useState<number>(0)
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setShouldLoadComponent(width >= 800);
+    };
 
-  const handleIndex = (index: number) => {
-    setIndexData(index)
-    setOnHover(true)
-  }
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Chamada inicial para definir o estado com base na largura inicial
 
-  const handleHover = () =>{
-    setOnHover(!onHover)
-  }
-
-  const bottom = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section id="class" className={style.containerMaster}>
-      <div ref={container} className="container-section">
-        <div className={style.containerImage}>
-          <div className={style.boxImage}>
-            <motion.img 
-            style={{bottom}} 
-            src={dataClasses[indexData].src}
-            alt={`foto de ${dataClasses[indexData].class}`}/>
-          </div>
-        </div>
-        <div className={style.containerContent}>
-          <div className={style.containerDescription}>
-            <motion.h1
-            variants={titleAnimation}
-            initial="initial"
-            animate={onHover ? "open" : "initial"}
-            >
-              <CharTranslate word="Nossas Modalidades" direction={true} velocity={2}/>
-            </motion.h1>
-            <motion.p variants={opacity}
-              initial="initial"
-              animate={onHover? "open" : "closed"}
-            >
-              {onHover ? 
-              dataClasses[indexData].description 
-              : 
-              ""}
-            </motion.p>
-          </div>
-          <div className={style.containerList}>
-            <ul className={style.listClasses}
-            onMouseLeave={() => handleHover()}>
-              {dataClasses.map((item, index) => (
-                <motion.li key={index}
-                  whileHover={{paddingLeft: "2rem"}}
-                  onMouseEnter={() => handleIndex(index)}
-                >
-                  {item.class}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+      {shouldLoadComponent? <FullSizeClass dataClasses={dataClasses}/> : <MobileClass dataClasses={dataClasses}/>}
       <div className={style.teste}>
 
       </div>
