@@ -59,9 +59,6 @@ export const Class = () => {
   return (
     <section id="class" className={style.containerMaster}>
       {shouldLoadComponent? <FullSizeClass dataClasses={dataClasses}/> : <MobileClass dataClasses={dataClasses}/>}
-      <div className={style.teste}>
-
-      </div>
     </section>
   )
 }

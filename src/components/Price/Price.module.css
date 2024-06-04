@@ -1,0 +1,103 @@
+.containerMaster{
+  margin-top: 2rem;
+  padding: 0 2 rem;
+}
+
+.containerTop{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.containerTitle{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.containerTitle h1{
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.containerTitle p{
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.containerTitle span{
+  color: var(--color2);
+}
+
+.containerSwich{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  text-transform: uppercase;
+  font-weight: 500;
+
+  position: relative;
+}
+
+.anualP{
+  color: var(--color2);
+
+  display: flex;
+  align-items: end;
+}
+
+.boxSwitch{
+  height: 3rem;
+  padding: 0.2rem;
+
+  background-color: var(--color5);
+
+  border-radius: 1rem;
+
+  position: relative;
+  cursor: pointer;
+
+  transition: background 0.2s ease
+}
+
+.boxSwitch.toggle{
+  background-color: var(--color2);
+}
+
+.boxSwitch span{
+  display: block;
+
+  position: relative;
+  top: 0%;
+
+  height: 1rem;
+  width: 1rem;
+
+  border-radius: 50%;
+
+  background-color: var(--color1);
+}
+
+@media (max-width: 1680px) {
+  .containerTitle h1{
+    font-size: 3vw;
+  }
+
+  .containerTitle p{
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .containerTitle h1{
+    font-size: 4.5vw;
+  }
+
+  .containerTitle p{
+    font-size: 2.5vw;
+  }
+
+  .containerSwich{
+    font-size: 4vw;
+  }
+}

@@ -1,10 +1,7 @@
 .containerMaster{
   background-color: var(--color3);
   padding: 0 2rem;
-}
-
-.teste{
-  height: 100vh;
+  padding-bottom: 6rem;
 }
 
 .containerMaster > div{
