@@ -1,6 +1,16 @@
 .containerMaster{
   margin-top: 2rem;
-  padding: 0 2 rem;
+  padding: 0 2rem;
+}
+
+.teste{
+  height: 100vh;
+}
+
+.containerMaster > div{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .containerTop{
@@ -76,6 +86,109 @@
   border-radius: 50%;
 
   background-color: var(--color1);
+}
+
+.containerPrices{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.containerPrices > div{
+  flex: 1;
+}
+
+.boxPrice{
+  background-color: var(--color3);
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  position: relative;
+}
+
+.boxPrice h2{
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.boxPrice p{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+.boxPrice p > span{
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.listPrice{
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+
+  padding-bottom: 4rem;
+}
+
+.offer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.offer svg{
+  color: var(--color2);
+}
+
+.buttonPrice{
+  background-color: var(--color2);
+  color: var(--color1);
+  
+  height: 4rem;
+  width: 40%;
+
+  border-radius: 4rem;
+
+  position: absolute;
+  bottom: -2rem;
+  right: 50%;
+
+  transform: translate(50%);
+
+  text-transform: uppercase;
+}
+
+.buttonPrice span{
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  
+  transition: opacity 0.5s ease;
+}
+
+.buttonPrice span:nth-child(2){
+  opacity: 0;
+}
+
+.buttonPrice:hover span:nth-child(1){
+  opacity: 0;
+}
+
+.buttonPrice:hover span:nth-child(2){
+  opacity: 1;
 }
 
 @media (max-width: 1680px) {
