@@ -10,7 +10,7 @@ import priceImg3 from "../../../public/home/price/price-3.jpg"
 
 const dataPrices = [
   {
-    title: "Básico",
+    title: "Basic",
     monthly: 100,
     annual: 1080,
     img: priceImg1,
@@ -87,6 +87,12 @@ export const Price = () => {
           </div>
 
           <div className={price.containerPrices}>
+            <div className={price.valuePrice}>
+              <div>
+                <h3>Preço</h3>
+                <p>R$ xxxx,xx</p>
+              </div>
+            </div>
             <motion.div style={{top: topOffer}}>
               {dataPrices.map((prices, index) => (
                 <motion.div className={price.boxPrice}
@@ -106,6 +112,11 @@ export const Price = () => {
                 </motion.div>
               ))}
             </motion.div>
+
+            <div className={price.toggleButton}>
+              <p>Anual</p>
+              <p>Mensal</p>
+            </div>
           </div>
         </motion.div>
       </div>
