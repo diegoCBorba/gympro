@@ -75,7 +75,7 @@
   width: 150px;
 }
 
-.valuePrice h3, .valuePrice p{
+.valuePrice h3, .containerValue{
   padding: 0.5rem;
 }
 
@@ -88,6 +88,17 @@
 
 .valuePrice p{
   font-weight: 400;
+  font-size: 1rem;
+}
+
+.valueFixed{
+  height: 25px;
+  overflow-y: hidden;
+}
+
+.valueFixed > div{
+  position: relative;
+  top: 0%;
 }
 
 .containerPrices > div{
@@ -121,8 +132,61 @@
   gap: 1rem;
 }
 
-.toggleButton{
+.containerToggle{
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.toggleButton > div:nth-child(3){
+  display: flex;
+  align-items: end;
+}
+
+.toggleButton p{
+  transition: color 0.5s ease;
+}
+
+.toggleButton p.active{
+  color: var(--color2);
+}
+
+.toggle{
+  height: 3rem;
+  width: 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  background-color: var(--color2);
+}
+
+.toggle::after{
+  content: '';
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: var(--color1);
+
+  position: relative;
+  top: 3%;
+  left: 1px;
+
+  transition: top 0.5s ease;
+}
+
+.toggle.active:after{
+  top: 58%;
 }
 
 @media (max-width: 1680px){  

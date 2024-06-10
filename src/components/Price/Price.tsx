@@ -51,6 +51,11 @@ export const Price = () => {
   const topOffer = useTransform(scrollYProgress, [0,1], ["0", "-200%"])
 
   const [titleVariant, setTitleVariant] = useState("first");
+  const [toggleState, setToggleState] = useState(false)
+
+  function handleToggle(){
+    setToggleState(!toggleState)
+  }
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((latest) => {
@@ -90,7 +95,18 @@ export const Price = () => {
             <div className={price.valuePrice}>
               <div>
                 <h3>Preço</h3>
-                <p>R$ xxxx,xx</p>
+                <div className={price.containerValue}>
+                  <div className={price.valueFixed}>
+                    <motion.div
+                      variants={animateTitleSlider}
+                      initial="first"
+                      animate={titleVariant}>
+                      {dataPrices.map((value, index) => (
+                        <p key={index}> R$ {toggleState ? value.annual : value.monthly},00</p>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
             <motion.div style={{top: topOffer}}>
@@ -113,9 +129,16 @@ export const Price = () => {
               ))}
             </motion.div>
 
-            <div className={price.toggleButton}>
-              <p>Anual</p>
-              <p>Mensal</p>
+            <div className={price.containerToggle}>
+              <div className={price.toggleButton}>
+                <div>
+                  <p className={toggleState? "" : price.active}>Mensal</p>
+                </div>
+                <div className={`${price.toggle} ${toggleState ? price.active : ""}`} onClick={handleToggle}></div>
+                <div>
+                  <p className={toggleState? price.active : ""}>Anual</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
