@@ -1,5 +1,6 @@
 :root{
   --text-size: 15rem;
+  --box-price-size: 500px;
 }
 
 .containerMaster{
@@ -35,7 +36,7 @@
   overflow-y: hidden;
 
   position: relative;
-  top: 2rem;
+  top: calc(var(--text-size) * 0.15);
 }
 
 .titleList > div{
@@ -59,13 +60,21 @@
 }
 
 .containerPrices{
-  overflow: hidden;
-  height: 500px;
-
   display: flex;
   justify-content: center;
+  gap: 10%;
 
   width: 100%;
+}
+
+.offerHidden{
+  overflow: hidden;
+  height: var(--box-price-size);
+  width: var(--box-price-size);
+}
+
+.offerHidden > div{
+  position: relative;
 }
 
 .valuePrice{
@@ -75,7 +84,6 @@
   justify-content: center;
 
   text-transform: uppercase;
-  width: 100%;
 }
 
 .valuePrice > div {
@@ -119,8 +127,8 @@
   padding: 1rem;
 
   background-color: var(--color2);
-  height: 500px;
-  width: 500px;
+  height: var(--box-price-size);
+  width: var(--box-price-size);
 
   display: flex;
   align-items: center;
@@ -141,7 +149,6 @@
 }
 
 .containerToggle{
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,6 +204,73 @@
   top: 58%;
 }
 
-@media (max-width: 1680px){  
+@media (max-width: 1080px){ 
+  :root{
+    --text-size: 8rem;
+    --box-price-size: 400px;
+  }
 
+  .titlePrice p{
+    font-size: 2rem;
+  }
+
+  .listOffer{
+    font-size: 1rem;
+  }
+
+  .containerPrices{
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .offerHidden{
+    display: flex;
+    justify-content: center;
+  }
+
+  .containerPrices > div:nth-child(2){
+    order: 1;
+    width: 100%;
+  }
+
+  .valuePrice, .containerToggle{
+    padding-top: 2rem;
+    width: 50%;
+  }
+
+  .valuePrice{
+    order: 2;
+  }
+  .containerToggle{
+    order: 3;
+  }
+}
+
+@media (max-width: 600px){ 
+  :root{
+    --text-size: 21.8vw;
+    --box-price-size: 70vw;
+  }
+
+  .titlePrice p{
+    font-size: 5vw;
+  }
+
+  .listOffer{
+    font-size: 3vw;
+    gap: 1vw;
+  }
+
+  .listOffer svg{
+    width: 4vw;
+  }
+
+  .valuePrice > div{
+    text-align: center;
+  }
+
+  .valuePrice, .containerToggle{
+    padding-top: 1rem;
+    width: 100%;
+  }
 }

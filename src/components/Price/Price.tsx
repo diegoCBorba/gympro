@@ -110,25 +110,28 @@ export const Price = () => {
                 </div>
               </div>
             </div>
-            <motion.div style={{top: topOffer}}>
-              {dataPrices.map((prices, index) => (
-                <motion.div className={price.boxPrice}
-                style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${prices.img})`}}
-                key={index}
-                >
-                  <ul className={price.listOffer}>
-                    {prices.offers.map((offer, index) => (
-                      <li key={index}>
-                        <div>
-                          <Check strokeWidth={2} size={25}/>
-                        </div>
-                        <span>{offer}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </motion.div>
+
+            <div className={price.offerHidden}>
+              <motion.div style={{top: topOffer}}>
+                {dataPrices.map((prices, index) => (
+                  <motion.div className={price.boxPrice}
+                  style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${prices.img})`}}
+                  key={index}
+                  >
+                    <ul className={price.listOffer}>
+                      {prices.offers.map((offer, index) => (
+                        <li key={index}>
+                          <div>
+                            <Check strokeWidth={2} size={25}/>
+                          </div>
+                          <span>{offer}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
 
             <div className={price.containerToggle}>
               <div className={price.toggleButton}>
@@ -141,6 +144,7 @@ export const Price = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
