@@ -7,9 +7,17 @@
   position: relative;
 }
 
+.teste{
+  height: 100vh;
+}
+
+.containerMaster > div{
+  position: sticky;
+  top: 0;
+}
+
 .containerFixed{
   height: 100vh;
-  position: relative;
 
   display: flex;
   flex-direction: column;

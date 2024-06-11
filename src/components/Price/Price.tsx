@@ -71,9 +71,10 @@ export const Price = () => {
   }, [scrollYProgress]);
 
   return (
+    <>
     <section ref={container} id="price" className={price.containerMaster}>
       <div className="container-section">
-        <motion.div className={price.containerFixed} style={{top}}>
+        <div className={price.containerFixed} style={{}}>
           <div className={price.titlePrice}>
             <p>nossos <span>planos</span></p>
             <div className={price.titleList}>
@@ -141,8 +142,10 @@ export const Price = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
+    <div className={price.teste}></div>
+    </>
   )
 }
