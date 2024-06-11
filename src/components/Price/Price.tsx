@@ -47,8 +47,7 @@ export const Price = () => {
       offset: ['start start', 'end end']
   })
 
-  const top = useTransform(scrollYProgress, [0,1], ["0", "200vh"])
-  const topOffer = useTransform(scrollYProgress, [0,1], ["0", "-200%"])
+  const top = useTransform(scrollYProgress, [0,1], ["0", "-200%"])
 
   const [titleVariant, setTitleVariant] = useState("first");
   const [toggleState, setToggleState] = useState(false)
@@ -112,7 +111,7 @@ export const Price = () => {
             </div>
 
             <div className={price.offerHidden}>
-              <motion.div style={{top: topOffer}}>
+              <motion.div style={{top}}>
                 {dataPrices.map((prices, index) => (
                   <motion.div className={price.boxPrice}
                   style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${prices.img})`}}
