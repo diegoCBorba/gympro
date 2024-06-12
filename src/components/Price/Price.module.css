@@ -1,5 +1,5 @@
 :root{
-  --text-size: 15rem;
+  --text-size: 14rem;
   --box-price-size: 500px;
 }
 
@@ -19,7 +19,7 @@
 
 .containerFixed{
   height: 100vh;
-
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@
 .containerPrices{
   display: flex;
   justify-content: center;
-  gap: 10%;
+  gap: 8%;
 
   width: 100%;
 }
@@ -204,12 +204,16 @@
   top: 58%;
 }
 
-@media (max-width: 1080px){ 
+@media (max-width: 1023px){ 
   :root{
     --text-size: 8rem;
     --box-price-size: 400px;
   }
 
+  .titlePrice{
+    padding-top: 2rem;
+  }
+  
   .titlePrice p{
     font-size: 2rem;
   }
