@@ -28,7 +28,6 @@ const dataTrainers = [
 export const Trainers = () => {
 
   return (
-    <>
     <section id="trainers" className={trainer.containerMaster}>
       <div className="container-section">
         <TitleTrainer/>
@@ -39,7 +38,5 @@ export const Trainers = () => {
         </div>
       </div>
     </section>
-    <div className={trainer.teste}></div>
-    </>
   )
 }

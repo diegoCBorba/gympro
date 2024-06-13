@@ -35,15 +35,13 @@ a{
 
 /* Estilizando a barra de rolagem */
 ::-webkit-scrollbar {
-  position: absolute;
-
   width: 4px; /* Largura da barra de rolagem */
   height: 4px; /* Altura da barra de rolagem horizontal */
 }
 
 /* Estilizando o fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-  background: transparent; /* Cor de fundo */
+  background: var(--color1); /* Cor de fundo */
   border-radius: 10px; /* Bordas arredondadas */
 }
 
@@ -57,9 +55,4 @@ a{
 ::-webkit-scrollbar-thumb:hover {
   background: #ce9913;
   ; /* Cor do polegar ao passar o mouse */
-}
-
-/* Estilizando o canto da barra de rolagem (onde as barras horizontal e vertical se encontram) */
-::-webkit-scrollbar-corner {
-  background: pink; /* Cor do canto */
 }

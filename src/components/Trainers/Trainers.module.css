@@ -3,7 +3,7 @@
 }
 
 .containerMaster{
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 2rem 6rem 2rem;
 }
 
 .titleTrainer{
@@ -36,10 +36,6 @@
   flex-wrap: wrap;
 
   gap: 1rem;
-}
-
-.teste{
-  height: 100vh;
 }
 
 .boxTrainer{

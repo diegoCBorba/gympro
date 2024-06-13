@@ -1,0 +1,135 @@
+.containerMaster{
+  background-color: var(--color3);
+  padding: 6rem 2rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.teste{
+  height: 100vh;
+}
+
+.subtitleBackground{
+  cursor: default;
+}
+
+.subtitleBackground h2{
+  font-size: 9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitleBackground span{
+  color: var(--color2);
+}
+
+.contactContainer{
+  background-color: var(--color2);
+  padding: 2rem;
+  color: var(--color1);
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.contactContainer p{
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contactContainer svg{
+  color: var(--color1);
+}
+
+.inputContact{
+  position: relative;
+}
+
+.inputContact span{
+  position: absolute;
+  top: -1rem;
+  left: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.inputContact.sucess span{
+  color: rgb(2, 137, 2);
+}
+
+.inputContact.error span{
+  color: red;
+}
+
+.inputContact input{
+  padding: 0.5rem;
+  background-color: transparent;
+
+  font-size: 1rem;
+  border: 1px solid var(--color1);
+  border-radius: 1rem;
+
+  padding-right: 2rem;
+}
+
+.inputContact input::placeholder{
+  color: #1a1a1a96;
+}
+
+
+.inputContact input:focus{
+  outline: 1px solid var(--color1);
+}
+
+.inputContact button{
+  cursor: pointer;
+
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translate(50%, -50%);
+
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color1);
+}
+
+.inputContact button:active{
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+}
+
+.inputContact svg{
+  color: var(--color2);
+}
+
+@media (max-width: 1680px){
+  .subtitleBackground h2{
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 800px){
+  .subtitleBackground h2{
+    font-size: 9vw;
+  }
+
+  .contactContainer{
+    padding: 2rem 1rem;
+    max-width: 280px;
+  }
+
+  .contactContainer p{
+    font-size: 0.8rem;
+  }
+}
