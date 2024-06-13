@@ -3,9 +3,10 @@ import trainer from "./Trainers.module.css"
 import imgTrainer1 from "../../../public/home/trainers/trainer-1.jpg"
 import imgTrainer2 from "../../../public/home/trainers/trainer-2.jpg"
 import imgTrainer3 from "../../../public/home/trainers/trainer-3.jpg"
-import { CharTranslate } from "../SentenceTranslate/CharTranslate"
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { CharTranslate } from "../SentenceTranslate/CharTranslate"
+import { SenteceTranslate } from "../SentenceTranslate/SentenceTranslate"
 
 const dataTrainers = [
   {
@@ -39,8 +40,15 @@ export const Trainers = () => {
     <section id="trainers" className={trainer.containerMaster}>
       <div className="container-section">
         <div className={trainer.titleTrainer}>
-          <h1>Nosso <span>Time</span></h1>
-          <p>Conheça Nossos Treinadores Especializados e Alcance Seus Objetivos com os Melhores Profissionais!</p>
+          <h1>
+            <CharTranslate direction velocity={2} word="Nosso "/> 
+            <span className={trainer.color}>
+              <CharTranslate direction velocity={2} word="Time"/>
+            </span>
+          </h1>
+          <p>
+            <SenteceTranslate sentence="Conheça Nossos Treinadores Especializados e Alcance Seus Objetivos com os Melhores Profissionais!" velocity={4}/>
+          </p>
         </div>
         <div className={trainer.containerTrainers}>
           {dataTrainers.map((trainers, index) => (
