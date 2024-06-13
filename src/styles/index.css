@@ -32,3 +32,34 @@ a{
   color: var(--color5);
   text-decoration: none;
 }
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  position: absolute;
+
+  width: 4px; /* Largura da barra de rolagem */
+  height: 4px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilizando o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: transparent; /* Cor de fundo */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilizando o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: var(--color2); /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilizando o polegar da barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #ce9913;
+  ; /* Cor do polegar ao passar o mouse */
+}
+
+/* Estilizando o canto da barra de rolagem (onde as barras horizontal e vertical se encontram) */
+::-webkit-scrollbar-corner {
+  background: pink; /* Cor do canto */
+}

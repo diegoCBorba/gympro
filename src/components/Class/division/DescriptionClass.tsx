@@ -22,7 +22,10 @@ export const DescriptionClass = ({ data, onHover }: PropsDescription) => {
       initial="initial"
       animate={onHover ? "open" : "initial"}
       >
-        <CharTranslate word="Nossas Modalidades" direction={true} velocity={2}/>
+        <CharTranslate word="Nossas " direction={true} velocity={2}/>
+        <span className={style.color}>
+          <CharTranslate word="Modalidades" direction={true} velocity={2}/>
+        </span>
       </motion.h1>
       <motion.p variants={opacity}
         initial="initial"

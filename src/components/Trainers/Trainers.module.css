@@ -1,5 +1,5 @@
 :root{
-  --box-size: 550px;
+  --box-size: 600px;
 }
 
 .containerMaster{
@@ -114,6 +114,20 @@
     font-size: 1rem;
   }
 
+  .containerTrainers{
+    gap: 2rem;
+  }
+
+  .boxImage{
+    height: var(--box-size);
+    width: var(--box-size);
+  }
+
+  .boxImage img{
+    width: 100%;
+    height: auto;
+  }
+
   .boxDescription h2{
     font-size: 6vw;
   }
@@ -123,6 +137,6 @@
   }
 
   :root{
-    --box-size: 85vw;
+    --box-size: calc(100vw - 64px);
   }
 }
