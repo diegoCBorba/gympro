@@ -15,13 +15,15 @@
 }
 
 .subtitleBackground h2{
+  position: relative;
+
   font-size: 9rem;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
 }
 
-.subtitleBackground span{
+.color{
   color: var(--color2);
 }
 
