@@ -16,8 +16,8 @@ export const ImageClass = ({ data, scrollYProgress }: PropsImage) => {
   return (
     <div className={style.containerImage}>
       <div className={style.boxImage}>
-        <motion.img 
-        style={{bottom}} 
+        <motion.img
+        style={{bottom}}
         src={data.src}
         alt={`foto de ${data.class}`}/>
       </div>

@@ -83,13 +83,12 @@
 
 .boxImage{
   height: 100%;
-  max-width: 50%;
+  max-width: 38%;
 
-  position: absolute;
-  overflow: hidden;
-
+  position: absolute;  
   right: 0;
-}
+  overflow: hidden;
+  }
 
 .boxImage img{
   position: relative;
@@ -102,6 +101,10 @@
   .containerDescription{
     height: 18vw;
     gap: 3.8vw;
+  }
+  
+  .boxImage{
+    max-width: 38vw;
   }
 
   .containerDescription p{
