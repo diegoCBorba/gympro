@@ -8,23 +8,19 @@
   position: relative;
 }
 
-.teste{
-  height: 100vh;
-}
-
 .containerMaster > div{
   position: sticky;
   top: 0;
 }
 
 .containerFixed{
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  }
+}
 
 .titlePrice{
   text-align: center;
