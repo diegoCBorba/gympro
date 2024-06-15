@@ -1,9 +1,17 @@
-import { SenteceTranslate } from "../../SentenceTranslate/SentenceTranslate"
 import contact from "../Contact.module.css"
 
-export const SubtitleContact = () => {
+import { MotionValue, motion, useTransform } from "framer-motion"
+import { SenteceTranslate } from "../../SentenceTranslate/SentenceTranslate"
+
+interface PropsSubtitleContact{
+  scrollYProgress: MotionValue<number>,
+}
+
+export const SubtitleContact = ({ scrollYProgress }: PropsSubtitleContact) => {
+  const top = useTransform(scrollYProgress, [0, 1], ["0", "2rem"])
+
   return (
-    <div className={contact.subtitleBackground}>
+    <motion.div style={{top}} className={contact.subtitleBackground}>
       <h2>
         <SenteceTranslate sentence="Conecte-se com" velocity={0}/>
       </h2>
@@ -13,6 +21,6 @@ export const SubtitleContact = () => {
         <SenteceTranslate sentence=" futuro" velocity={0}/>
         </span>
       </h2>
-    </div>
+    </motion.div>
   )
 }

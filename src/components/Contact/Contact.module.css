@@ -3,15 +3,12 @@
   padding: 6rem 2rem;
 
   position: relative;
-  overflow: hidden;
-}
-
-.teste{
-  height: 100vh;
 }
 
 .subtitleBackground{
   cursor: default;
+
+  position: relative;
 }
 
 .subtitleBackground h2{
@@ -42,6 +39,8 @@
   top: 100%;
   right: 50%;
   transform: translate(50%, -50%);
+
+  z-index: 2;
 }
 
 .contactContainer p{

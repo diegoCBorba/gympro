@@ -12,14 +12,11 @@ export const Contact = () => {
   })
 
   return (
-    <>
     <section ref={container} id="contact" className={contact.containerMaster}>
       <div className="container-section">
-        <SubtitleContact/>
+        <SubtitleContact scrollYProgress={scrollYProgress}/>
         <BoxContact scrollYProgress={scrollYProgress}/>
       </div>
     </section>
-    <div className={contact.teste}></div>
-    </>
   )
 }

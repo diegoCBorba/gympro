@@ -1,0 +1,269 @@
+:root{
+  --size-magnetic-button: 10vw;
+  --font-size-bottom: 0.8vw;
+
+}
+
+.containerMaster{
+  background-color: var(--color2);
+  color: var(--color1);
+
+  position: relative;
+  
+  min-height: min(100vh, 1000px);
+
+  padding: 1vw 2vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  justify-content: space-between;
+
+}
+
+.stickyFooter{
+  position: absolute;
+  top: -1rem;
+  right: 0;
+
+  height: 0%;
+  width: 100%;
+
+  z-index: 1;
+
+  background-color: var(--color3);
+}
+
+.topContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  justify-content: center;
+  
+  padding: 0 6vw;
+  padding-top: 20vh;
+}
+
+.containerDescription{
+  display: flex;
+}
+
+.logoBox{
+  text-transform: uppercase;
+}
+
+.logoBox p{
+  font-size: 2vw;
+  font-weight: 400;
+
+  text-align: end;
+  padding-right: 1vw;
+}
+
+.logoBox h1{
+  font-size: 10vw;
+  font-weight: 500;
+
+  line-height: 8vw;
+}
+
+.row{
+  width: 100%;
+  height: 0.1vw;
+  border-radius: 1vw;
+  background-color: var(--color1);
+
+  position: relative;
+}
+
+.boxMagnetic{
+  height: var(--size-magnetic-button);
+  width: var(--size-magnetic-button);
+
+  position: absolute;
+  top: 50%;
+  right: 10%;
+
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+}
+
+.magneticButton{
+  height: var(--size-magnetic-button);
+  width: var(--size-magnetic-button);
+
+  background-color: var(--color1);
+  border-radius: 50%;
+}
+
+.magneticButton a{
+  height: var(--size-magnetic-button);
+  width: var(--size-magnetic-button);
+
+  color: var(--color2);
+  text-transform: uppercase;
+  font-size: 1vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+
+  transform: translate(50%, -50%);
+}
+
+.contactContainer{
+  display: flex;
+  gap: 2rem;
+}
+
+.contactContainer a{
+  color: var(--color1);
+  font-size: 1.3vw;
+
+  border: 1px solid var(--color1);
+  border-radius: 2vw;
+
+  padding: 1rem;
+
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.contactContainer a:hover{
+  color: var(--color2);
+  background-color: var(--color1);
+}
+
+.containerBottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerBottom h2{
+  font-size: 1.2vw;
+  text-transform: uppercase;
+
+  font-weight: 500;
+}
+
+.containerBottom p{
+  font-size: var(--font-size-bottom);
+}
+
+.containerBottom a{
+  font-size: var(--font-size-bottom);
+  color: var(--color1);
+}
+
+.containerBottom .row{
+  display: none;
+}
+
+.creditsContainer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+@media (max-width: 1200px) {
+  :root{
+    --size-magnetic-button: 8rem;
+    --font-size-bottom: 0.8rem;
+  }
+
+  .magneticButton a{
+    font-size: 0.8rem;
+  }
+  
+  .logoBox p{
+    font-size: 1.5rem;
+    padding-right: 0.8rem;
+  }
+  
+  .logoBox h1{
+    font-size: 7rem;
+    font-weight: 500;
+  
+    line-height: 6rem;
+  }
+
+  .contactContainer a{
+    font-size: 1rem;
+  }  
+
+  .containerBottom h2{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .topContainer{
+    padding-top: 25vw;
+  }
+
+  .containerBottom{
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .containerBottom .row{
+    display: block;
+  }
+
+  .creditsContainer{
+    justify-content: space-between;
+  }
+
+  .contactContainer{
+    flex-direction: column;
+    padding-top: 6vw;
+    gap: 4vw;
+  }
+
+  .contactContainer a{
+    display: flex;
+    justify-content: center;
+    border-radius: 8vw;
+    font-size: 3.5vw;
+  }
+
+  :root{
+    --size-magnetic-button: 35vw;
+    --font-size-bottom: 3vw;
+  }
+  
+  .magneticButton a{
+    font-size: 3vw;
+  }
+
+  .topContainer{
+    gap: 20vw;
+  }
+
+  .containerBottom{
+    gap: 4vw;
+    padding-bottom: 4vh;
+  }
+  
+  .logoBox p{
+    font-size: 3.4vw;
+    padding-right: 1vw;
+  }
+  
+  .logoBox h1{
+    font-size: 14vw;
+    font-weight: 500;
+  
+    line-height: 12vw;
+  }
+
+  .containerBottom h2{
+    font-size: 3.5vw;
+  }
+}
