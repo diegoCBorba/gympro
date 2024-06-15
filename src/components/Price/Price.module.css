@@ -6,6 +6,8 @@
 .containerMaster{
   height: 300vh;
   position: relative;
+
+  padding-top: 4rem;
 }
 
 .containerMaster > div{
@@ -24,7 +26,6 @@
 
 .titlePrice{
   text-align: center;
-  padding-top: 4rem;
 }
   
 .titleList{
@@ -200,13 +201,29 @@
   top: 58%;
 }
 
+@media (max-width: 1680px){ 
+  :root{
+    --box-price-size: 30vw;
+  }
+
+  .listOffer{
+    font-size: 1.4vw;
+    gap: 1vw;
+  }
+
+  .listOffer svg{
+    width: 2vw;
+  }
+}
+
 @media (max-width: 1023px){ 
   :root{
     --text-size: 8rem;
     --box-price-size: 400px;
   }
 
-  .titlePrice{
+  
+  .containerMaster{
     padding-top: 2rem;
   }
   
