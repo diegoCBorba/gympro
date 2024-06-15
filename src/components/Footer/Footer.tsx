@@ -29,7 +29,10 @@ export const Footer = () => {
           <motion.div style={{right}} className={footer.boxMagnetic}>
             <ButtonMagnetic>
               <div className={footer.magneticButton}>
-                <a href="">contato</a>
+                <a href="">
+                  <span>Contato</span>
+                  <span>Clique</span>
+                </a>
               </div>
             </ButtonMagnetic>
           </motion.div>

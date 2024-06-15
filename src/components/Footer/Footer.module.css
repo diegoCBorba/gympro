@@ -117,6 +117,24 @@
   transform: translate(50%, -50%);
 }
 
+.magneticButton span{
+  position: absolute;
+
+  transition: opacity 0.5s ease;
+}
+
+.magneticButton span:last-child{
+  opacity: 0;
+}
+
+.magneticButton:hover span:last-child{
+  opacity: 1;
+}
+
+.magneticButton:hover span:first-child{
+  opacity: 0;
+}
+
 .contactContainer{
   display: flex;
   gap: 2rem;
