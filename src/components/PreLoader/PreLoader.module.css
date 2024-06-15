@@ -1,0 +1,59 @@
+.containerMaster{
+  position: fixed;
+
+  height: 100vh;
+  width: 100%;
+
+  z-index: 1000;
+
+  display: flex;
+}
+
+.column{
+  width: 25%;
+  height: 100%;
+
+  background-color: var(--color1);
+}
+
+.containerTitle{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  height: 10vw;
+  overflow: hidden;
+}
+
+.boxTitle{
+  position: relative;
+}
+
+.boxTitle span{
+  font-size: 8vw;
+
+  position: relative;
+}
+
+.boxTitle span:last-child{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: var(--color2);
+  overflow: hidden;
+
+  width: 80%;
+}
+
+
+@media (max-width: 1200px){
+  .containerTitle{
+    height: 12vw;
+  }
+
+  .boxTitle span{
+    font-size: 10vw;
+  }
+}

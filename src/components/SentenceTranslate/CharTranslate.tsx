@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import {  motion, useInView } from "framer-motion";
 import { ReactNode, useRef } from "react";
 
 import charTrans from "./SentenceTranslate.module.css"
@@ -9,9 +9,10 @@ interface PropsChar {
   velocity: number,
   word: string,
   direction: boolean
+  delay ?: number
 }
 
-export const CharTranslate = ({ velocity, word, direction }: PropsChar) => {
+export const CharTranslate = ({ velocity, word, direction, delay = 0 }: PropsChar) => {
   const body = useRef(null);
   const isInView = useInView(body, { once: true, margin: "10%" });
 
@@ -22,15 +23,14 @@ export const CharTranslate = ({ velocity, word, direction }: PropsChar) => {
         <motion.span
           custom={
             direction ?
-            index * (Number(velocity)/100)
+            delay + (index * (Number(velocity)/100))
             :
-            (word.length - index) * (Number(velocity)/100)
+            delay + ((word.length - index) * (Number(velocity)/100))
           }
           key={`c_${index}`}
           variants={translateAnimation}
           initial="initial"
-          animate={isInView ? "open" : ""}
-        >
+          animate={isInView ? "open" : ""}>
           {char === " " ? "\u00A0" : char}
         </motion.span>
       </span>

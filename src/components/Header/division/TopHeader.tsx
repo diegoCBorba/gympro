@@ -14,10 +14,10 @@ export const TopHeader = ({ scrollYProgress }: PropsTop) => {
     <div className={header.containerHigher}>
       <motion.div style={{ y }} className={header.boxLogoHeader}>
         <p>
-          <CharTranslate velocity={2} word="seja parte" direction={true}/>
+          <CharTranslate velocity={2} word="seja parte" direction={true} delay={3}/>
         </p>
         <p>
-          <CharTranslate velocity={2} word="viva fitness" direction={false}/>
+          <CharTranslate velocity={2} word="viva fitness" direction={false} delay={3}/>
         </p>
       </motion.div>
     </div>

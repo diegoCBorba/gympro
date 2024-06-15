@@ -14,9 +14,9 @@ export const BackgroundHeader = ({scrollYProgress}: PropsBackground) => {
 
   return (
     <motion.div className={header.boxImageHeader}
-      initial={{height: "105%"}}
+      initial={{height: "102%"}}
       animate={{height: "100%"}}
-      transition={{duration: 1}}
+      transition={{duration: 0.8, delay: 3}}
       style={{backgroundImage: `url(${imageHeader})`, height, bottom}}
     />
   )
